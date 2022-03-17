@@ -17,7 +17,7 @@ export default function Form() {
     const onChangeInputEmail = function(e) {
         setEmail(e.target.value);
 
-        const re = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/g;
+        const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
         setValidEmail(re.test(e.target.value));
     }
 
@@ -38,13 +38,13 @@ export default function Form() {
                 type="text"
                 value={email}
                 onChange={onChangeInputEmail}/>
-                {
-                    email === '' ?
-                        null: 
-                        validEmail ? 
-                            <FontAwesomeIcon icon={faCheckCircle} style={{fontSize: 16, color: 'blue'}}/> :
-                            <FontAwesomeIcon icon={faTimesCircle} style={{fontSize: 16, color: 'red'}}/>
-                }
+            {
+                email === '' ?
+                null: 
+                validEmail ? 
+                    <FontAwesomeIcon icon={faCheckCircle} style={{marginLeft:5, fontSize: 16, color: 'blue'}}/> :
+                    <FontAwesomeIcon icon={faTimesCircle} style={{marginLeft:5, fontSize: 16, color: 'red'}}/>
+            }
 
             <label htmlFor="password">패스워드</label>
             <input id="password" name="password" type="password" value={ "" } />
