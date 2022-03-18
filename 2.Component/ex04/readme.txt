@@ -16,7 +16,7 @@ ex04: Component - State
 02. 제어 컴포넌트
     1. input, textarea, option과 같은 폼 컴포넌트 중에 사용자 입력에 따라서 state값이
        변경되고 렌더링 하는 컴포넌트를 제어(Controlled) 컴포넌트라 한다.
-    2.
+    2. 
     3.
     4. 예제    
       - src/02 제어 컴포넌트
