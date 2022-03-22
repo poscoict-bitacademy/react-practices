@@ -7,14 +7,19 @@ ex05: Component - Lifecycle
       [3]render
       [4]*componentDidMount: 컴포넌트 생성을 마치고 렌더링 작업이 끝난 후,
   2) Lifecycle II: update
-     getDerivedStateFromProps: props로 받아온 값을 state에 동기화한다.[react v16.3]
-     shouldComponentUpdate: props나 state을 변경 했을 때, 리렌더링 여부를 결정한다.
-     render
+      [1] getDerivedStateFromProps: props로 받아온 값을 state에 동기화한다.[react v16.3]
+      [2] shouldComponentUpdate: props나 state을 변경 했을 때, 리렌더링 여부를 결정한다.
+      [3] render
+      [4] getSnapshotBeforeUpdate: 메소드 호출 후, DOM에 변화를 반영하기 직전에 호출 [react v16.3]
       *componentDidUpdate: DOM 업데이트가 끝난 직 후 호출된다. DOM 작업이 가능하다.
   3) Lifecycle III: Unmount
      *componentWillUnmount: 컴포넌트를 DOM에서 제거하기 전 
 
 02. Alternative(대용): Functional Component Lifecycle: useEffect Hook
+
+
+
+
 
 1. 설치
 $ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader node-sass sass-loader babel-loader @babel/core @babel/cli @babel/preset-env @babel/preset-react
