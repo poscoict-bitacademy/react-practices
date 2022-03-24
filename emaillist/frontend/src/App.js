@@ -9,7 +9,7 @@ const App = () => {
   const [emails, setEmails] = useState(data);
 
   useEffect(async () => {
-      const response = await fetch('/api/nodwqdwqdwq', {
+      const response = await fetch('/api', {
         method: 'get',
         headers: {
           'Content-Type': 'application/json',
