@@ -18,7 +18,20 @@ const App = () => {
         body: null
       });
 
-      console.log(response);
+      if(!response.ok) {
+        console.log("error:", response.status, response.statusText);
+        return;
+      }
+
+      const json = await response.json();
+
+      if(json.result !== 'success') {
+        console.log("error:", json.message);
+        return;      
+      }
+      
+      setEmails(json.data);
+
   }, []);
 
 
