@@ -6,7 +6,7 @@ import Emaillist from './Emaillist';
 import data from './assets/json/data.json';
 
 const App = () => {
-  const [emails, setEmails] = useState(data);
+  const [emails, setEmails] = useState([]);
 
   useEffect(async () => {
       const response = await fetch('/api', {
