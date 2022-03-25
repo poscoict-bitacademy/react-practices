@@ -3,10 +3,12 @@ import './assets/scss/App.scss';
 import RegisterForm from './RegisterForm';
 import SearchBar from './SearchBar';
 import Emaillist from './Emaillist';
-import data from './assets/json/data.json';
 
 const App = () => {
-  const [emails, setEmails] = useState([]);
+  const [emails, setEmails] = useState([
+
+    
+  ]);
 
   useEffect(async () => {
       const response = await fetch('/api', {
