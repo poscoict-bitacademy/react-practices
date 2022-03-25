@@ -31,15 +31,30 @@ spring:
       username: webdb
       password: webdb
 
+
+---
+# development profile: spring boot configuration
+spring:
+   config:
+      activate:
+         on-profile: development
+
+   # devtools - live reload
+   devtools:
+      livereload:
+         enabled: true
+
+
 ---
 # mybatis
 mybatis:
    config-location: classpath:mybatis/configuration.xml
+
    
 ---
 # server
 server:
-   port: 8080
+   port: 8888
    servlet:
       context-path: /
       encoding:
