@@ -5,10 +5,7 @@ import SearchBar from './SearchBar';
 import Emaillist from './Emaillist';
 
 const App = () => {
-  const [emails, setEmails] = useState([
-
-    
-  ]);
+  const [emails, setEmails] = useState([]);
 
   useEffect(async () => {
       const response = await fetch('/api', {
@@ -38,7 +35,8 @@ const App = () => {
 
 
   const notifyKeywordChange = function(keyword) {
-    setEmails(data.filter(e => e.firstName.indexOf(keyword) != -1 || e.lastName.indexOf(keyword) != -1 || e.email.indexOf(keyword) != -1));
+    console.log("/api?kw=" + keyword);
+    // setEmails(data.filter(e => e.firstName.indexOf(keyword) != -1 || e.lastName.indexOf(keyword) != -1 || e.email.indexOf(keyword) != -1));
   }
 
   return (
