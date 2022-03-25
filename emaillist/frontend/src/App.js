@@ -56,13 +56,37 @@ const App = () => {
       }
       
       setEmails(json.data);
+
     } catch(err) {
       console.log(err);      
     }     
   }
 
-  const notifyEmailAdd = function(email) {
-    console.log('post /api', email);
+  const notifyEmailAdd = async function(email) {
+    try {  
+      const response = await fetch('/api', {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(email)
+      });
+
+      if(!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if(json.result !== 'success') {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+
+      setEmails([json.data, ...emails]);
+    } catch(err) {
+      console.log(err);      
+    }    
   }
 
   return (
