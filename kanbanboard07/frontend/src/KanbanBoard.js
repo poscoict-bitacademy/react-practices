@@ -1,7 +1,7 @@
 import React from 'react';
 import CardList from './CardList';
 import styles from './assets/css/KanbaBoard.css';
-import cards from './assets/json/data.json';
+//import cards from './assets/json/data.json';
 
 const KanbanBoard = () => {
   return (
