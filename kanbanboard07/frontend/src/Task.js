@@ -7,7 +7,7 @@ const Task = ({name, done}) => {
         <input
           type='checkbox'
           checked={done === 'Y'}
-          onClick={e => setStateDone(!stateDone)} />
+          onClick={e => {}} />
         {name}
         <a href='#' className={styles.TaskList__Task__remove}></a>
     </li>
