@@ -6,6 +6,7 @@ const Card = ({no, title, description}) => {
   const[tasks, setTasks] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   
+
   return (
     <div className={styles.Card}>
         <div
