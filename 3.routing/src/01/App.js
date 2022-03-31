@@ -16,8 +16,8 @@ export default function App() {
             window.removeEventListener("hashchange", handleHashChange);
         };
     }, []);
-
-    return (function(){
+    
+    return (() => {
         switch(route) {
             case '/' :
                 return <Main />;
